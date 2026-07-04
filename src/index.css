@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0F19;
+  --color-foreground: #FFFFFF;
+  --color-primary: #00E5FF;
+  --color-secondary: #FFB300;
+  
+  --color-cyan-neon: #00E5FF;
+  --color-amber-neon: #FFB300;
+  --color-dark-glass: rgba(11, 15, 25, 0.7);
+}
+
+@layer base {
+  :root {
+    --background: #0B0F19;
+    --foreground: 0 0% 98%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: var(--color-dark-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
